@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mango Price Model</title>
+</head>
+<body>
+    <h1>Mango Price Model</h1>
+    <form action="/predict" method="post">
+        <label for="area">Enter the history Price of Mango:</label>
+        <input type="number" id="area" name="area" required>
+        <button type="submit">Predict</button>
+    </form>
+    <br>
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+</html>
